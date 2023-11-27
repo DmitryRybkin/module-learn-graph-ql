@@ -1,0 +1,3 @@
+interface ProductInterface {
+    is_oversized: Boolean @resolver(class: "Learn\\GraphQl\\Model\\Resolver\\IsOversizedResolver") @doc(description: "Is product oversized")
+}
