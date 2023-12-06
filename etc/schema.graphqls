@@ -1,3 +1,11 @@
 interface ProductInterface {
     is_oversized: Boolean @resolver(class: "Learn\\GraphQl\\Model\\Resolver\\IsOversizedResolver") @doc(description: "Is product oversized")
 }
+
+type Blog {
+    title: String @doc(description: "Blog title field")
+}
+
+type Query {
+    blog: Blog @resolver(class: "Learn\\GraphQl\\Model\\Resolver\\BlogResolver") @doc(description: "Return a list of blogs.")
+}
